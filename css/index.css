@@ -178,6 +178,60 @@ template {
 [hidden] {
   display: none
 }
+
+/*颜色块-黄*/
+span#yellow-block {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 90%;
+  font-weight: normal;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.1rem;
+  background-color: #FFD700;
+}
+
+/*颜色块-绿色*/
+span#green-block {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 90%;
+  font-weight: normal;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.1rem;
+  background-color: #5cb85c;
+}
+
+/*颜色块-灰色*/
+span#gray-block {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 90%;
+  font-weight: normal;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.1rem;
+  background-color: #4f4f4f;
+}
+
+/*移动端优化：去除归档、标签、最新文章、公告、、只保留网站统计*/
+@media screen and (max-width: 800px) {
+  #aside_content
+  div:not(:last-child) {
+      display: none;
+      font-size: 13px;
+  }
+}
 .limit-one-line,
 #aside_content .card-info .card-info-data > .card-info-data-item a .headline,
 #aside_content .card-archives ul.card-archive-list > .card-archive-list-item a span,
@@ -263,15 +317,29 @@ body {
   line-height: 2;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-*::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
 }
-*::-webkit-scrollbar-thumb {
-  background: var(--btn-bg);
+::-webkit-scrollbar-track {
+  background-color: rgba(73,177,245,0.2);
+  border-radius: 2em;
 }
-*::-webkit-scrollbar-track {
+::-webkit-scrollbar-thumb {
+  background-color: #558afa;
+  background-image: -webkit--webkit-linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
+  background-image: -webkit--moz-linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
+  background-image: -webkit--o-linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
+  background-image: -webkit--ms-linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
+  border-radius: 2em;
+}
+::-webkit-scrollbar-corner {
   background-color: transparent;
+}
+::-moz-selection {
+  color: #fff;
+  background-color: #e58a8a;
 }
 input::placeholder {
   color: var(--font-color);
